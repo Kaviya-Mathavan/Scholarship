@@ -1,0 +1,44 @@
+#grid-container5{
+    display: grid;
+    grid-template-columns: auto auto ;
+    padding: 10px;
+    column-gap: 102px;
+    margin-left: 342px;
+    margin-right: -287px;
+    column-gap: -9px;
+  }
+  #bu10{
+    background-color: #0072E5;
+    border: none;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-left: 82%;
+    width: 15%;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+
+  
+}
+
+#standard-basic1{
+  padding-top: 54px
+}
+#standard-basic2{
+  padding-top: 54px
+}
+#standard-basic3{
+  padding-top: 54px
+}
+#standard-basic4{
+  padding-top: 54px
+}
+#standard-basic5{
+  padding-top: 54px
+}
+#standard-basic6{
+  padding-top: 54px
+}
+#standard-basic7{
+  padding-top: 54px
+}

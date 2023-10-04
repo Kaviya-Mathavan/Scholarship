@@ -1,0 +1,40 @@
+.grid-container2 {
+    display: grid;
+    grid-template-columns: auto  ;
+    /* background-color: #2196F3; */
+    padding: 10px;
+    column-gap: 102px;
+  }
+
+  #r1{
+    background-color: #0072E5; /* Green */
+    border: none;
+    border-radius: 10px;
+   /* color: rgb(255, 255, 255); */
+   margin-top: 5%;
+   margin-left: 80%;
+   /* width: 15%; */
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+
+}
+#h{
+    color: black;
+}
+#bb{
+    background-color: #0072E5; /* Green */
+    border: none;
+    border-radius: 10px;
+   /* color: rgb(255, 255, 255); */
+   margin-top: 5%;
+   margin-left: 80%;
+   /* width: 15%; */
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+
+}
+#ar1{
+    color: black;
+}

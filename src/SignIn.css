@@ -1,0 +1,62 @@
+#pd1{
+    color: black;
+}
+
+.contain{
+    align-items: center;
+    margin-left: 300px
+}
+
+#s{
+    background-color: #0072E5;
+    border: none;
+    border-radius: 10px;
+    /* color: rgb(255, 255, 255); */
+    margin-top: 5%;
+    /* margin-left: 35%; */
+    width: 15%;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 213px;
+    height: 50px;
+    padding: 5px;
+    /* padding -left: 30%; */
+    /* border: 1px solid blue; */
+
+}
+#d{
+    color: black;
+
+}
+#s1{
+    background-color: #0072E5;
+    border: none;
+    border-radius: 10px;
+   color: rgb(255, 255, 255);
+   /* margin-top: 5%; */
+   /* margin-left: 80%; */
+   width: 15%;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 150px;
+    height: 50px;
+    /* border: 1px solid blue; */
+
+}
+#outlined-select-role{
+    margin: 23px;
+}
+.title{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 750px;
+    width: 100%;
+    background-image:url("./Image/signinlog.png");
+
+}
+#signinemail{
+    margin-bottom: 38px;
+}

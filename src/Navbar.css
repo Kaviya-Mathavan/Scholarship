@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+}
+.navbar {
+background-color: rgb(20, 21, 20);
+display: flex;
+justify-content: space-between;
+color: white;
+font-family: 'Times New Roman';
+width: 1520px;
+height: 70px;
+}
+.navbar > img {
+width: 70px;
+height: 70px;
+margin-left: 0px;
+}
+.navbar ul {
+list-style: none;
+display: flex;
+margin-right: 50px;
+gap: 3em;
+float: right;
+}
+.logocls {
+width: 10;
+height: 20;
+}
+.nav-lists a:hover {
+background-color: rgba(253, 255, 127, 0.688);
+color: rgba(0, 0, 0, 0.411);
+}
+.nav-lists a {
+text-decoration: none;
+display: flex;
+color: white;
+font-size: 25px;
+font-family: 'Times New Roman';
+float: right;
+}
+#head{
+    margin-top: 18px;
+    font-size:x-large;
+}

@@ -1,0 +1,54 @@
+input{
+    border: 0;
+}
+#standard-basic-comm{
+  padding-top: 54px
+}
+#outlined-select-gender{
+    margin: 23px;
+}
+
+#pp{
+  padding-top: 54px
+}
+
+#ic{
+  padding-top: 54px
+}
+
+#outlined-select-ownhouse{
+  margin: 23px;
+}
+#bu{
+    background-color: #0072E5;
+    border: none;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-left: 82%;
+    width: 15%;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+
+}
+#aadharfile{
+  padding-top: 52px;
+}
+#aadharfile1{
+  padding-top: 72px;
+}
+#datepic{
+  padding-top: 52px;
+}
+#pd{
+    color: black;
+    margin-left: 508px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto ;
+    padding: 10px;
+    column-gap: 102px;
+    margin-left: 342px;
+    margin-right: -287px;
+  }

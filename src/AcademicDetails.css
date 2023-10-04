@@ -1,0 +1,46 @@
+input{
+    border: 0;
+}
+
+#outlined-select-gender{
+    margin: 23px;
+}
+#bu{
+    background-color: #0072E5; /* Green */
+    border: none;
+    border-radius: 10px;
+   /* color: rgb(255, 255, 255); */
+   margin-top: 8%;
+   margin-left: 92%;
+   width: 15%;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    padding: 5px;
+
+
+}
+#pd{
+    color: black;
+    margin-left: 607px;
+}
+.grid-container3{
+    display: grid;
+    grid-template-columns: auto auto ;
+    /* background-color: #2196F3; */
+    padding: 10px;
+    column-gap: 102px;
+    margin-left: 50%;
+    margin-right: -52%;
+  }
+  #marksheet1{
+    padding-top: 56px
+  }
+
+  #marksheet4{
+    padding-top: 54px
+  }
+
+  #marksheet3{
+    padding-top: 54px
+  }

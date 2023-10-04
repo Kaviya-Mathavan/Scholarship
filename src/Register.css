@@ -1,0 +1,66 @@
+/* .signIn{
+   background-color: red;
+    color:dodgerblue;
+} */
+input{
+    border: 0;
+}
+
+#outlined-select-gender{
+    margin: 23px;
+}
+#bu{
+    background-color: #0072E5; /* Green */
+    border: none;
+    border-radius: 10px;
+   /* color: rgb(255, 255, 255); */
+   margin-top: 5%;
+   margin-left: 80%;
+   width: 15%;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+
+}
+
+#r{
+    color: black;
+    margin-left: 88%;
+}
+.grid-container1{
+    display: grid;
+    grid-template-columns: auto ;
+    /* background-color: #2196F3; */
+    padding: 10px;
+    column-gap: 102px;
+    margin-left: 50%;
+    margin-right: -56%;
+  }
+  #bu1{
+    background-color: #0072E5; /* Green */
+    border: none;
+    border-radius: 10px;
+  
+   margin-top: 5%;
+   margin-left: 80%;
+   width: 15%;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+
+}
+#ar{
+    color: black;
+    margin-top: -1%;
+    margin-left: 117%;
+    margin-right: -51%;
+}
+
+#signinemail1{
+    margin-bottom: 38px;
+}
+
+
+#signinemail2{
+    margin-bottom: 38px;
+}
