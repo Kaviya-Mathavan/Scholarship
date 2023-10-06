@@ -120,8 +120,7 @@ const Register = () => {
                       <TextField id="signinemail1" label="Name" variant="standard" 
                             ref={userRef}
                             autoComplete="off"
-                            type="name"
-                         
+                            // type="name"
                             onChange={(e) => setUser(e.target.value)}
                             value={user}
                             required
@@ -144,7 +143,7 @@ const Register = () => {
                         <TextField id="signinemail2" label="Email" variant="standard" 
                             ref={userRef}
                             autoComplete="off"
-                            type="email"
+                            // type="email"
                          
                             onChange={(e) => setEmail(e.target.value)}
                             value={email}
@@ -220,9 +219,7 @@ const Register = () => {
                     </form>
                    
                     <p id="ar">
-                        Already registered?<Link className="signIn" to="/SignIn">SignIn</Link>
-                       
-                       
+                        Already registered?<Link className="signIn" to="/SignIn">SignIn</Link>  
                     </p>
                 </section>
             )}

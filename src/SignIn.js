@@ -96,6 +96,7 @@ const SignIn= () => {
     }, [email, pwd])
 
     const handleSubmit = async (e) => {
+        console.log("ok");
         e.preventDefault();
         // if button enabled with JS hack
         const v1 = USER_REGEX.test(email);
@@ -133,6 +134,53 @@ const SignIn= () => {
         }
     }
 
+    function submit() {
+        // const v1 = USER_REGEX.test(email);
+        
+        // const v2 = PWD_REGEX.test(pwd);
+        // if (!v1 || !v2) {
+        //     setErrMsg("Invalid Entry");
+        //     return;
+        // }
+        console.log("ÖK");
+        var data  = {"email":email,"password": pwd  }
+        try {
+             axios.post("http://localhost:8080/api/v1/signup/login",
+                data
+            ).then((results) => {
+                if(results.data[1] != undefined){
+                    if (role === "Student") {
+                        window.location.href = "http://localhost:3000/PersonalDetails";
+                    } else {
+                        window.location.href = "http://localhost:3000/Chart";
+                    }
+                }
+                else{
+                    setErrMsg("Invalid Entry");
+                    return;
+                }
+            })
+            
+            setEmail('')
+            setPwd('');
+           
+        } catch (err) {
+            if (!err?.response) {
+                setErrMsg('No Server Response');
+            } else if (err.response?.status === 409) {
+                setErrMsg('Username Taken');
+            } else {
+                setErrMsg('Registration Failed')
+            }
+            errRef.current.focus();
+        }
+    }
+
+    function Adminsubmit() {
+        console.log(
+            "OKAY"
+        );
+    }
    
     return (
         <>
@@ -154,19 +202,19 @@ const SignIn= () => {
            
                           <TextField id="signinemail" label="Email" variant="standard" 
                             ref={userRef}
-                            autoComplete="off"
+                     
                             onChange={(e) => setEmail(e.target.value)}
                             value={email}
-                            type="email"
+                            // type="email"
                             required
                             aria-invalid={validemail ? "false" : "true"}
                             aria-describedby="emailnote"
                             onFocus={() => setEmailFocus(true)}
                             onBlur={() => setEmailFocus(false)}
-                        />
+                        /> <br></br>
                         <p id="emailnote" className={emailFocus && !valid ? "instructions" : "offscreen"}>
                             <FontAwesomeIcon icon={faInfoCircle} />
-                          <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>
+                          {/* <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span> */}
                         </p>
 
 
@@ -178,7 +226,7 @@ const SignIn= () => {
                         </label> */}
                           <TextField id="standard-basic" label="Password" variant="standard" 
                             ref={userRef}
-                            autoComplete="off"
+                     
                             onChange={(e) => setPwd(e.target.value)}
                             value={pwd}
                             type="password"
@@ -188,11 +236,11 @@ const SignIn= () => {
                             onFocus={() => setPwdFocus(true)}
                             onBlur={() => setPwdFocus(false)}
                         />
-                        <p id="pwdnote" className={pwdFocus && !validPwd ? "instructions" : "offscreen"}>
-                            <FontAwesomeIcon icon={faInfoCircle} />
-                            <br />
-                            <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>
-                        </p>
+                        {/* <p id="pwdnote" className={pwdFocus && !validPwd ? "instructions" : "offscreen"}> */}
+                            {/* <FontAwesomeIcon icon={faInfoCircle} /> */}
+                            {/* <br /> */}
+                            {/* <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span> */}
+                        {/* </p> */}
                         <TextField id="outlined-select-role" label="RoleSelection" variant="standard" 
                             select
                             ref={userRef}
@@ -229,7 +277,11 @@ const SignIn= () => {
                     
                     {/* <buttom onClick={handleSubmit}><Link to="/PersonalDetails">SignIn</Link></buttom> */}
                        
-                      { role==="Student" ? ( <button disabled={!validemail || !validPwd  ? true : false} id ="s" onclick={handleSubmit} ><Link to="/PersonalDetails">SignIn</Link></button> ):(<button  disabled={!validemail || !validPwd  ? true : false}id ="s"  onclick={handleSubmit}><Link to="/Chart">SignIn</Link></button>)}
+                      { role==="Student" ? ( <button  id ="s" onClick={()=>{submit()}} >
+                        {/* <Link to="/PersonalDetails">SignIn</Link> */} Student SignIn
+                        </button> ):(<button id="s" onClick={()=>{ submit()}}>
+                        {/* <Link to="/Chart">SignIn</Link> */} Admin SignIn
+                        </button>)}
                        
                     <br></br>
                     <p id="d">
